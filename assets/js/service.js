@@ -1,5 +1,5 @@
 const serviceData = {
-  subtitle: 'ALL SERVICES',
+  subtitle: 'SERVICES',
   title: 'Trusted For Our Services',
   description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   services: [
