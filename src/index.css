@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #f97316;
+  --color-secondary: #0f2a44;
+  --color-accent: #1e88e5;
+  --color-light: #f4f7fa;
+  --color-dark: #111827;
+
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Rubik', sans-serif;
+
+  --breakpoint-3xl: 1900px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
