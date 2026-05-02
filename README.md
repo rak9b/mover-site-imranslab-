@@ -1,122 +1,107 @@
 <div align="center">
-  <h1>🚛 WeMove Transport (React + Vite)</h1>
-  <p>
-    <strong>A Modern Logistics & Cargo Web Application</strong><br/>
-    <em>Built with React 19, Vite, Tailwind CSS, and Framer Motion</em>
+  <img src="https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React 19" />
+  <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+
+  <h1 align="center">🚛 WeMove Transport – Premium Logistics Experience</h1>
+  <p align="center">
+    <strong>A next-generation Logistics & Cargo Web Application engineered for performance and visual excellence.</strong><br/>
+    <em>Built with React 19, Vite, Tailwind CSS, and Framer Motion.</em>
   </p>
 </div>
 
 ---
 
-## 📖 About the Project
+## ✨ Overview
 
-**WeMove Transport** is a state-of-the-art logistics and cargo company website migrated from static HTML to a modern **React component architecture**. It presents transport services, featured logistics projects, and company information in a clean, professional, and highly dynamic layout—designed to reflect a top-tier, real-world transport business.
+**WeMove Transport** has been completely overhauled into a state-of-the-art logistics platform. This project represents the pinnacle of modern web design, migrating from standard HTML to a **highly dynamic React architecture**. 
 
-This project focuses on **high performance**, **reusability**, and **seamless animations**, utilizing React hooks, Framer Motion for scroll/entry animations, and Tailwind CSS for rapid responsive styling.
-
----
-
-## ✨ Key Highlights
-
-- ⚡ **Lightning Fast Build & Dev:** Powered by [Vite](https://vitejs.dev/).
-- ⚛️ **Component-Based Architecture:** Modular React codebase ensuring scalability and easy maintenance.
-- 🎨 **Utility-First Styling:** Crafted completely with [Tailwind CSS v4](https://tailwindcss.com/) for pixel-perfect, responsive design.
-- 🎬 **Smooth Animations:** Integrated [Framer Motion](https://www.framer.com/motion/) for fluid page transitions, floating shapes, and interactive micro-animations.
-- 📱 **Mobile-First Responsive Design:** Seamlessly adapts to any screen size from mobile devices to ultra-wide displays.
+Featuring a brand-new **Premium Dark Mode** aesthetic, immersive **Glassmorphism**, and fluid scroll reveals, this application sets a new standard for transport and cargo business interfaces.
 
 ---
 
-## 🛠️ Technologies Used
+## 🌟 Premium Features
+
+- 🎨 **Sleek Dark Mode Aesthetics:** Deep `#0a0f1c` backgrounds paired with vibrant neon orange and blue gradients for a high-end, professional look.
+- 🎬 **Cinematic Animations:** Powered by [Framer Motion](https://www.framer.com/motion/), experience buttery-smooth scroll reveals, floating elements, and 3D hover interactions.
+- 🧊 **Glassmorphism UI:** Advanced backdrop filters and semi-transparent layers create a modern, immersive user experience.
+- ⚡ **Lightning Fast Build & Dev:** Powered by the incredible speed of [Vite 8](https://vitejs.dev/).
+- ⚛️ **Component-Driven:** A strictly modular, highly scalable React codebase.
+- 📱 **Flawlessly Responsive:** Perfectly crafted with [Tailwind CSS v4](https://tailwindcss.com/) to look stunning on any device.
+
+---
+
+## 🛠️ Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
-| **React 19** | UI Library & Component Engine |
-| **Vite 8** | Next-Generation Frontend Tooling |
-| **Tailwind CSS 4** | Styling Framework |
-| **Framer Motion** | UI Animations & Gestures |
-| **ESLint** | Code Quality & Linting |
-| **Ionicons / Custom SVG** | Iconography |
+| **React 19** | Core UI Library & Component Engine |
+| **Vite 8** | Next-Generation Frontend Build Tool |
+| **Tailwind CSS 4** | Utility-First Styling Framework |
+| **Framer Motion** | Advanced UI Animations & Gestures |
+| **ESLint** | Code Quality & Strict Linting |
+| **Ionicons** | Beautiful, scalable vector icons |
 
 ---
 
-## 📂 Project Structure
+## 📂 Project Architecture
 
 ```text
 wemove-transport/
-├── public/                 # Static public assets
+├── public/                 # Static assets & vectors
 ├── src/
-│   ├── assets/             # Images, shapes, and project banners
-│   ├── components/         # Reusable React UI Components
-│   │   ├── Header.jsx      # Navigation & Mobile Drawer
-│   │   ├── Hero.jsx        # Landing Section with Animations
-│   │   ├── About.jsx       # Company Info & Stats
-│   │   ├── Service.jsx     # Transport Services Grid
+│   ├── assets/             # High-res imagery & project assets
+│   ├── components/         # Highly modular React UI Components
+│   │   ├── Header.jsx      # Sticky Navigation & Mobile Drawer
+│   │   ├── Hero.jsx        # Animated Hero Section
+│   │   ├── About.jsx       # Company Info & Parallax
+│   │   ├── Service.jsx     # Interactive Transport Services
 │   │   ├── Feature.jsx     # Key Features / Highlights
-│   │   ├── Project.jsx     # Horizontal Scroll Projects Gallery
-│   │   ├── Blog.jsx        # Latest News & Articles
+│   │   ├── Project.jsx     # Dynamic Projects Gallery
+│   │   ├── Blog.jsx        # Latest News Cards
 │   │   ├── Footer.jsx      # Multi-column Footer
-│   │   └── BackTop.jsx     # Floating Scroll-to-Top Button
-│   ├── App.jsx             # Root App Component layout
-│   ├── main.jsx            # React Initialization
-│   └── index.css           # Global Tailwind & Custom Styles
-├── eslint.config.js        # Linter rules configuration
-├── package.json            # Dependencies & Scripts
-└── vite.config.js          # Vite build configuration
+│   │   └── BackTop.jsx     # Floating Scroll-to-Top
+│   ├── data/               # Centralized data structures
+│   ├── App.jsx             # Root layout engine
+│   ├── main.jsx            # Application entry point
+│   └── index.css           # Global tokens & custom CSS utilities
+└── package.json            # Dependencies & Scripts
 ```
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start Guide
 
-Follow these steps to run the project locally on your machine.
+Want to experience the premium interface locally? Follow these steps:
 
 ### 1. Clone the repository
-
 ```bash
-git clone https://github.com/nawazdevx/wemove-transport.git
-cd wemove-transport
+git clone https://github.com/rak9b/mover-site-imranslab-.git
+cd mover
 ```
 
 ### 2. Install Dependencies
-
-Using npm:
 ```bash
 npm install
 ```
 
-### 3. Run Development Server
-
+### 3. Launch Development Server
 ```bash
 npm run dev
 ```
-
-Your app will be live at `http://localhost:5173/`. Vite provides ultra-fast Hot Module Replacement (HMR) for instant updates as you edit files!
+Navigate to `http://localhost:5173/` in your browser. Vite’s Hot Module Replacement (HMR) guarantees instant updates as you edit.
 
 ### 4. Build for Production
-
-When you're ready to deploy:
 ```bash
 npm run build
 ```
-This command bundles your React app into highly optimized static files in the `dist/` directory.
-
----
-
-## 🖼️ Project Preview
-
-![Desktop Preview](./src/assets/readme-image.png)
-
----
-
-## 📝 License
-
-This project is open-source and available under the [MIT License](https://choosealicense.com/licenses/mit/).
+This command compiles the React application into highly optimized, minified static files in the `dist/` directory, ready for global deployment.
 
 ---
 
 ## 🤝 Support & Contact
 
-If you found this migration helpful, consider giving it a ⭐ on GitHub!
+If this premium architecture accelerates your development, consider giving the repository a ⭐!
 
-**Developer:**
-Connect with me on [LinkedIn](https://www.linkedin.com/in/nawazdevx) or visit my [Portfolio](https://nawazdevx.vercel.app/).
+**Developed with precision by Imran.**
