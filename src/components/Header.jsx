@@ -15,7 +15,7 @@ export default function Header() {
 
   // Track active section
   useEffect(() => {
-    const sectionIds = headerData.menu.map(m => m.link).filter(l => l.startsWith('#'));
+    const sectionIds = headerData.menu.map(m => m.link).filter(l => l.startsWith('#') && l.length > 1);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
