@@ -44,11 +44,10 @@ export default function Header() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-          scrolled
-            ? 'bg-dark/95 backdrop-blur-xl shadow-2xl shadow-black/20 py-2'
-            : 'bg-transparent py-4'
-        }`}
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled
+            ? 'bg-secondary/85 backdrop-blur-2xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] border-b border-white/5 py-3'
+            : 'bg-transparent py-5'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}

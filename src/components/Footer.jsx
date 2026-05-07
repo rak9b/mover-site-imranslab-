@@ -20,28 +20,37 @@ function FadeInWhenVisible({ children, delay = 0, className = '' }) {
 
 export default function Footer() {
   return (
-    <footer className="bg-dark text-white relative overflow-hidden">
+    <footer className="bg-secondary text-white relative overflow-hidden mt-32">
       {/* Background decorations */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[200px]" />
-      <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-accent/5 rounded-full blur-[150px]" />
+      <div className="absolute top-0 left-1/4 w-[50rem] h-[50rem] bg-primary/5 rounded-full blur-[200px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[40rem] h-[40rem] bg-accent/5 rounded-full blur-[150px] pointer-events-none" />
+
+      {/* Grid Pattern */}
+      <div className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px),
+                            linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)`,
+          backgroundSize: '3rem 3rem'
+        }}
+      />
 
       {/* Newsletter CTA bar */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-20 max-w-7xl mx-auto px-6">
         <FadeInWhenVisible>
-          <div className="relative -top-16 bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl shadow-primary/20">
-            <div>
-              <h3 className="font-heading font-bold text-2xl md:text-3xl text-white">
+          <div className="relative -top-20 bg-gradient-to-r from-primary to-accent rounded-[2rem] p-10 md:p-14 flex flex-col lg:flex-row items-center justify-between gap-10 shadow-[0_30px_60px_rgba(255,107,0,0.2)] border border-white/10">
+            <div className="text-center lg:text-left max-w-lg">
+              <h3 className="font-heading font-black text-3xl md:text-4xl text-white leading-tight">
                 Subscribe to our Newsletter
               </h3>
-              <p className="text-white/70 mt-2 text-sm md:text-base">Get the latest news and updates delivered straight to your inbox.</p>
+              <p className="text-white/80 mt-4 text-base md:text-lg font-medium">Get the latest news, updates, and logistics insights delivered straight to your inbox.</p>
             </div>
-            <div className="flex w-full md:w-auto gap-0 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-1.5">
+            <div className="flex w-full lg:w-auto gap-0 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-2 shadow-inner">
               <input
                 type="email"
-                placeholder="Enter your email"
-                className="bg-transparent text-white placeholder-white/50 px-4 py-3 text-sm outline-none flex-1 min-w-0 md:min-w-[220px]"
+                placeholder="Enter your email address"
+                className="bg-transparent text-white placeholder-white/60 px-6 py-4 text-base outline-none flex-1 min-w-0 lg:min-w-[300px] font-medium"
               />
-              <button className="bg-white text-primary px-6 py-3 rounded-lg font-semibold text-sm whitespace-nowrap hover:bg-gray-100 transition-colors">
+              <button className="bg-white text-secondary px-8 py-4 rounded-xl font-bold text-sm tracking-widest uppercase hover:bg-slate-100 hover:scale-105 transition-all duration-300 shadow-lg">
                 Subscribe
               </button>
             </div>
@@ -50,34 +59,34 @@ export default function Footer() {
       </div>
 
       {/* Main footer content */}
-      <div className="max-w-7xl mx-auto px-6 pb-8 relative z-10 -mt-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+      <div className="max-w-7xl mx-auto px-6 pb-12 relative z-10 -mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-8">
 
           {/* Brand column */}
           <FadeInWhenVisible className="lg:col-span-4">
             <div>
-              <a href="#home" className="flex items-center gap-2 group">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
-                  <span className="text-white font-heading font-bold text-lg">W</span>
+              <a href="#home" className="flex items-center gap-3 group">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-500 shadow-lg border border-white/10">
+                  <span className="text-white font-heading font-black text-xl">W</span>
                 </div>
-                <h2 className="text-2xl font-heading font-bold text-white">
+                <h2 className="text-3xl font-heading font-black text-white tracking-tight">
                   {footerData.logo}<span className="text-primary">.</span>
                 </h2>
               </a>
 
-              <p className="mt-5 text-white/40 leading-relaxed max-w-xs text-sm">
+              <p className="mt-8 text-slate-400 leading-relaxed max-w-sm text-base font-light">
                 {footerData.description}
               </p>
 
-              <div className="flex gap-3 mt-6">
+              <div className="flex gap-4 mt-8">
                 {footerData.social.map((item) => (
                   <a
                     key={item.icon}
                     href={item.link}
-                    className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 hover:-translate-y-1"
+                    className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 hover:-translate-y-2 shadow-lg"
                     aria-label={item.icon}
                   >
-                    <ion-icon name={item.icon} />
+                    <ion-icon name={item.icon} class="text-xl" />
                   </a>
                 ))}
               </div>
@@ -88,19 +97,19 @@ export default function Footer() {
           {footerData.columns.map((col, i) => (
             <FadeInWhenVisible key={col.title} delay={0.1 * (i + 1)} className="lg:col-span-2 first:lg:col-start-6">
               <div>
-                <h3 className="font-heading font-bold text-sm uppercase tracking-wider text-white/80 mb-6 flex items-center gap-2">
-                  <span className="w-3 h-0.5 bg-primary rounded-full" />
+                <h3 className="font-heading font-black text-sm uppercase tracking-[0.2em] text-white mb-8 flex items-center gap-3">
+                  <span className="w-4 h-1 bg-primary rounded-full" />
                   {col.title}
                 </h3>
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {col.links.map((link) => (
                     <li key={link}>
                       <a
-                        href="#"
-                        className="text-white/40 hover:text-primary text-sm transition-colors duration-200 flex items-center gap-0 hover:gap-2"
+                         href="#"
+                         className="group flex items-center gap-2 text-slate-400 hover:text-white text-base font-medium transition-all duration-300"
                       >
-                        <ion-icon name="chevron-forward-outline" class="text-xs opacity-0 hover:opacity-100" />
-                        {link}
+                         <span className="w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-4 rounded-full" />
+                         {link}
                       </a>
                     </li>
                   ))}
@@ -112,14 +121,14 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/30 text-sm">
+        <div className="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <p className="text-slate-500 text-sm font-medium tracking-wide">
             {footerData.copyright}
           </p>
-          <div className="flex gap-6">
-            <a href="#" className="text-white/30 hover:text-white/60 text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-white/30 hover:text-white/60 text-sm transition-colors">Terms of Service</a>
-            <a href="#" className="text-white/30 hover:text-white/60 text-sm transition-colors">Cookies</a>
+          <div className="flex gap-8">
+            <a href="#" className="text-slate-500 hover:text-white text-sm font-medium tracking-wide transition-colors">Privacy Policy</a>
+            <a href="#" className="text-slate-500 hover:text-white text-sm font-medium tracking-wide transition-colors">Terms of Service</a>
+            <a href="#" className="text-slate-500 hover:text-white text-sm font-medium tracking-wide transition-colors">Cookies</a>
           </div>
         </div>
       </div>
